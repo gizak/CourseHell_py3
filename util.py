@@ -11,11 +11,11 @@ import sys
 
 class Capture:
 	__url_login='http://jwas3.nju.edu.cn:8080/jiaowu/login.do'
-	__url_campus='%E4%BB%99%E6%9E%97%E6%A0%A1%E5%8C%BA'
+	__url_campus='%e9%bc%93%e6%a5%bc%e6%a0%a1%e5%8c%ba'#'%E4%BB%99%E6%9E%97%E6%A0%A1%E5%8C%BA' 
 	__url_catch='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=discussRenewCourseList&campus='
 	__url_submit='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=submitDiscussRenew&campus='
 	__store=[]
-	__token_login={'userName':'091270012','password':'090062'}
+	__token_login={'userName':'091270012','password':'090062'} 
 	__data_raw=None
 	__data=''
 
