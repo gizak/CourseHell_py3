@@ -33,19 +33,13 @@ class Capture:
 	def token_assign(self):
 		self.__token_login['userName']=input('User Name:')
 		self.__token_login['password']=input('Password:')
-		print('\n')
+		pass
 
 	def cookie_init(self):
 		opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
 		urllib.request.install_opener(opener)
-		login=urllib.request.urlopen(self.__url_login,urllib.parse.urlencode(self.__token_login).encode('utf-8'))
-		'''
-		if login.geturl()==self.__url_login :
-			print('login failed, retry:\n')
-			self.token_assign()
-			self.cookie_init()
-		'''
-		    
+		urllib.request.urlopen(self.__url_login,urllib.parse.urlencode(self.__token_login).encode('utf-8'))
+
 	def __get_raw(self):
 		self.__data_raw=urllib.request.urlopen(self.__url_catch).read()
 
