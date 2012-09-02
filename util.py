@@ -14,11 +14,7 @@ class Capture:
 	__url_campus_gl='%e9%bc%93%e6%a5%bc%e6%a0%a1%e5%8c%ba'
 	__url_campus_xl='%E4%BB%99%E6%9E%97%E6%A0%A1%E5%8C%BA' 
 	__url_campus=None
-<<<<<<< HEAD
 	__url_catch='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=discussRenewCourseList&campus='
-=======
-	__url_catch='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=publicRenewCourseList&campus='
->>>>>>> done
 	__url_submit='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=submitDiscussRenew&campus='
 	__store=[]
 	__token_login={'userName':'091279049','password':'000000'} 
@@ -26,12 +22,6 @@ class Capture:
 	__data=''
 
 	def __init__(self):
-<<<<<<< HEAD
-		self.__url_campus=self.__url_campus_xl
-		self.__url_catch+=self.__url_campus
-		self.__url_submit+=self.__url_campus
-=======
->>>>>>> done
 		self.token_assign()
 		self.cookie_init()
 		self.campus_assign()
@@ -56,22 +46,13 @@ class Capture:
 		opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
 		urllib.request.install_opener(opener)
 		login=urllib.request.urlopen(self.__url_login,urllib.parse.urlencode(self.__token_login).encode('utf-8'))
-<<<<<<< HEAD
-		'''
-		if login.geturl()==self.__url_login :
-			print('login failed, retry:\n')
-			self.token_assign()
-			self.cookie_init()
-		'''
-=======
 		is_valid=re.search(r'<div id="UserInfo">',login.read().decode())
 		if not is_valid :
 			print('login failed, retry:\n')
 			self.token_assign()
 			self.cookie_init()
 		else:
-			print('start:\n')
->>>>>>> done
+			print('start:')
 		    
 	def __get_raw(self):
 		self.__data_raw=urllib.request.urlopen(self.__url_catch).read()
