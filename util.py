@@ -17,7 +17,7 @@ class Capture:
 	__url_catch='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=discussRenewCourseList&campus='
 	__url_submit='http://jwas3.nju.edu.cn:8080/jiaowu/student/elective/courseList.do?method=submitDiscussRenew&campus='
 	__store=[]
-	__token_login={'userName':'091279049','password':'000000'} 
+	__token_login={'userName':'','password':''} 
 	__data_raw=None
 	__data=''
 
